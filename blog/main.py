@@ -6,7 +6,7 @@ from .routers import blog, user, authentication
 
 app = FastAPI()
 
-models.Base.metadata.create_all(engine)
+models.Base.metadata.create_all(bind=engine)
 
 html_content = """
 <html>
